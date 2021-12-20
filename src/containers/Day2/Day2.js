@@ -3,6 +3,7 @@ import { Layout, Menu, Breadcrumb } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import { Routes, Route, useNavigate, useParams } from "react-router-dom";
 import JsxTest from "components/JsxTest";
+import ContextAPI from "components/ContextAPI";
 const { Content, Sider } = Layout;
 
 const Day1 = () => {
@@ -20,7 +21,10 @@ const Day1 = () => {
 					<Menu.Item key="1" onClick={() => navigate('jsx')} icon={<UserOutlined />}>
 						JSX
 					</Menu.Item>
-					<Menu.Item key="2" icon={<UserOutlined />} onClick={() => {
+					<Menu.Item key="2" onClick={() => navigate('context-api')} icon={<UserOutlined />}>
+						Context API
+					</Menu.Item>
+					<Menu.Item key="3" icon={<UserOutlined />} onClick={() => {
 						window.open('https://beta.reactjs.org/learn/responding-to-events', '_blank')
 					}}>
 						React.js Playground
@@ -46,6 +50,7 @@ const Day1 = () => {
 							왼쪽 메뉴를 클릭해 주세요
 						</div>} />
 						<Route path="jsx" element={<JsxTest />} />
+						<Route path="context-api" element={<ContextAPI />} />
 					</Routes>
 				</Content>
 			</Layout>

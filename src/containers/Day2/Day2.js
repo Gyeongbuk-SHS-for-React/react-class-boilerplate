@@ -2,8 +2,6 @@ import React from "react";
 import { Layout, Menu, Breadcrumb } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import { Routes, Route, useNavigate, useParams } from "react-router-dom";
-import HtmlTest from "components/HtmlTest";
-import CssTest from "components/CssTest";
 import JsxTest from "components/JsxTest";
 const { Content, Sider } = Layout;
 

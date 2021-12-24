@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { Button } from "antd";
 
 const FunctionComponent = (props) => {
+  const { name } = props
   const [count, setCount] = useState(0)
   return <div style={{ border: "1px solid blue" }}>
   <div>
-      {props.name}
+      {name}
     </div>
     <div>
       <Button onClick={() => setCount(count + 1)}>{count}</Button>
@@ -22,11 +23,12 @@ class ClassComponent extends React.Component {
   }
 
   render() {
+    const { name } = this.props
     const { count } = this.state
 
     return <div style={{ border: "1px solid red" }}>
       <div>
-        {this.props.name}
+        {name}
       </div>
       <div>
         <Button onClick={() => this.setState({ count: count + 1 })}>{count}</Button>

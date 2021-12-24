@@ -4,6 +4,7 @@ import { UserOutlined } from '@ant-design/icons';
 import { Routes, Route, useNavigate, useParams } from "react-router-dom";
 import HtmlTest from "components/HtmlTest";
 import CssTest from "components/CssTest";
+import Init from "components/Init";
 const { Content, Sider } = Layout;
 
 const Day1 = () => {
@@ -46,7 +47,7 @@ const Day1 = () => {
 					}}
 				>
           <Routes>
-            <Route path="" element={<HtmlTest />} />
+						<Route path="" element={<Init />} />
             <Route path="html" element={<HtmlTest />} />
             <Route path="css" element={<CssTest />} />
           </Routes>

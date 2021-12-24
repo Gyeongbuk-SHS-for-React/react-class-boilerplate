@@ -4,6 +4,7 @@ import { UserOutlined } from '@ant-design/icons';
 import { Routes, Route, useNavigate, useParams } from "react-router-dom";
 import JsxTest from "components/JsxTest";
 import ContextAPI from "components/ContextAPI";
+import Init from "components/Init";
 const { Content, Sider } = Layout;
 
 const Day1 = () => {
@@ -46,9 +47,7 @@ const Day1 = () => {
 					}}
 				>
 					<Routes>
-						<Route path="" element={<div>
-							왼쪽 메뉴를 클릭해 주세요
-						</div>} />
+						<Route path="" element={<Init />} />
 						<Route path="jsx" element={<JsxTest />} />
 						<Route path="context-api" element={<ContextAPI />} />
 					</Routes>

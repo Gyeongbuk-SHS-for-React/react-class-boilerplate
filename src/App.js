@@ -27,9 +27,11 @@ function App() {
         </div>
         <Menu theme="dark" mode="horizontal" style={{ width: '100%', display: 'flex' }}>
           {course.map(({ title, path }, key) => {
-            return <Menu.Item key={key} onClick={() => {
-              navigate(`/${path}`)
-            }}>{title}</Menu.Item>
+            if (title) {
+              return <Menu.Item key={key} onClick={() => {
+                navigate(`/${path}`)
+              }}>{title}</Menu.Item>
+            }
           })}
         </Menu>
       </Header>

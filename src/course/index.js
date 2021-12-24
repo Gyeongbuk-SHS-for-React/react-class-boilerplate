@@ -1,4 +1,8 @@
 export const course = [{
+  path: "",
+  component: "Home",
+},
+{
   title: "1일차",
   path: "day1",
   component: "Day1",

@@ -25,7 +25,7 @@ const Home = () => {
         강의 목차
       </Title>
 
-      <Collapse style={{ width: 600, marginTop: 100 }} bordered={false}>
+      <Collapse style={{ width: 600, marginTop: 100, overflow: "auto" }} bordered={false}>
         {classContent.map((item, idx) => (
           <Collapse.Panel
             header={<div>{idx + 1} 일차</div>}

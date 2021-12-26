@@ -1,0 +1,15 @@
+.ant-collapse {
+  border-radius: 20px !important;
+}
+
+.ant-collapse-item:last-child {
+  border-radius: 20px !important;
+}
+
+.class-card {
+  width: 800px;
+}
+
+.custom-panel {
+  font-size: 18px;
+}

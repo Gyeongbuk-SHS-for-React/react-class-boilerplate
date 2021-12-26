@@ -4,7 +4,6 @@ import "./Home.css";
 
 const { Title } = Typography;
 
-const days = ["1일차", "2일차", "3일차", "4일차", "5일차"];
 const classContent = [
   ["강사 소개", "개발환경 설정", "HTML 기초", "Css 기초"],
   [

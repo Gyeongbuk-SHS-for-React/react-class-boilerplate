@@ -25,6 +25,7 @@ function App() {
       <Header className="header">
         <img
           className="logo"
+          alt="logo"
           src={soco}
           onClick={() => navigate("/")}
           style={{ width: 80, height: 80, marginRight: 120 }}

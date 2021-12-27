@@ -1,0 +1,2 @@
+(this["webpackJsonpreact-class-boilerplate"]=this["webpackJsonpreact-class-boilerplate"]||[]).push([[7],{85:function(a,e,s){"use strict";s.r(e);var t=s(128);e.default=t.default}}]);
+//# sourceMappingURL=7.25f25d66.chunk.js.map

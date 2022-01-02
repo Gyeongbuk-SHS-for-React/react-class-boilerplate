@@ -2,12 +2,18 @@ import React from "react";
 import { Layout, Menu, Breadcrumb } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import { Routes, Route, useNavigate, useParams } from "react-router-dom";
-import JsxTest from "components/JsxTest";
-import ContextAPI from "components/ContextAPI";
+import PropsTest from "components/PropsTest";
+import PropsTest2 from "components/PropsTest2";
+import PropsTest3 from "components/PropsTest3";
+import StateTest from "components/StateTest";
+import StateTest2 from "components/StateTest2";
+import StateTest3 from "components/StateTest3";
+import StateTest4 from "components/StateTest4";
+import ComponentTest from "components/ComponentTest";
 import Init from "components/Init";
 const { Content, Sider } = Layout;
 
-const Day1 = () => {
+const Day2 = () => {
   const params = useParams();
   const navigate = useNavigate();
 
@@ -21,29 +27,59 @@ const Day1 = () => {
         >
           <Menu.Item
             key="1"
-            onClick={() => navigate("jsx")}
+            onClick={() => navigate("props1")}
             icon={<UserOutlined />}
           >
-            JSX
+            Props1
           </Menu.Item>
           <Menu.Item
             key="2"
-            onClick={() => navigate("context-api")}
+            onClick={() => navigate("props2")}
             icon={<UserOutlined />}
           >
-            Context API
+            Props2
           </Menu.Item>
           <Menu.Item
             key="3"
+            onClick={() => navigate("props3")}
             icon={<UserOutlined />}
-            onClick={() => {
-              window.open(
-                "https://beta.reactjs.org/learn/responding-to-events",
-                "_blank"
-              );
-            }}
           >
-            React.js Playground
+            Props3
+          </Menu.Item>
+          <Menu.Item
+            key="4"
+            onClick={() => navigate("state1")}
+            icon={<UserOutlined />}
+          >
+            State1
+          </Menu.Item>
+          <Menu.Item
+            key="5"
+            onClick={() => navigate("state2")}
+            icon={<UserOutlined />}
+          >
+            State2
+          </Menu.Item>
+          <Menu.Item
+            key="6"
+            onClick={() => navigate("state3")}
+            icon={<UserOutlined />}
+          >
+            State3
+          </Menu.Item>
+          <Menu.Item
+            key="7"
+            onClick={() => navigate("state4")}
+            icon={<UserOutlined />}
+          >
+            State4
+          </Menu.Item>
+          <Menu.Item
+            key="8"
+            onClick={() => navigate("component")}
+            icon={<UserOutlined />}
+          >
+            Component
           </Menu.Item>
         </Menu>
       </Sider>
@@ -63,8 +99,14 @@ const Day1 = () => {
         >
           <Routes>
             <Route path="" element={<Init />} />
-            <Route path="jsx" element={<JsxTest />} />
-            <Route path="context-api" element={<ContextAPI />} />
+            <Route path="props1" element={<PropsTest />} />
+            <Route path="props2" element={<PropsTest2 />} />
+            <Route path="props3" element={<PropsTest3 />} />
+            <Route path="state1" element={<StateTest />} />
+            <Route path="state2" element={<StateTest2 />} />
+            <Route path="state3" element={<StateTest3 />} />
+            <Route path="state4" element={<StateTest4 />} />
+            <Route path="component" element={<ComponentTest />} />
           </Routes>
         </Content>
       </Layout>
@@ -72,4 +114,4 @@ const Day1 = () => {
   );
 };
 
-export default Day1;
+export default Day2;

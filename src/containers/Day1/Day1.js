@@ -2,9 +2,9 @@ import React from "react";
 import { Layout, Menu, Breadcrumb } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import { Routes, Route, useNavigate, useParams } from "react-router-dom";
-import HtmlTest from "components/HtmlTest";
-import CssTest from "components/CssTest";
 import Init from "components/Init";
+import BasicTest from "components/BasicTest";
+
 const { Content, Sider } = Layout;
 
 const Day1 = () => {
@@ -19,31 +19,25 @@ const Day1 = () => {
           selectable={false}
           style={{ height: "100%", borderRight: 0, fontSize: 18 }}
         >
-          <Menu.Item
-            key="1"
-            onClick={() => navigate("html")}
-            icon={<UserOutlined />}
-          >
-            HTML
+          <Menu.Item key="1" icon={<UserOutlined />}>
+            강의 소개
           </Menu.Item>
-          <Menu.Item
-            key="2"
-            onClick={() => navigate("css")}
-            icon={<UserOutlined />}
-          >
-            CSS
+          <Menu.Item key="2" icon={<UserOutlined />}>
+            개발 환경 설정
           </Menu.Item>
           <Menu.Item
             key="3"
+            onClick={() => navigate("basic")}
             icon={<UserOutlined />}
-            onClick={() => {
-              window.open(
-                "https://www.w3schools.com/html/default.asp",
-                "_blank"
-              );
-            }}
           >
-            W3CSchool
+            리액트 기본 개념 소개
+          </Menu.Item>
+          <Menu.Item
+            key="4"
+            onClick={() => navigate("jsx")}
+            icon={<UserOutlined />}
+          >
+            JSX
           </Menu.Item>
         </Menu>
       </Sider>
@@ -63,8 +57,7 @@ const Day1 = () => {
         >
           <Routes>
             <Route path="" element={<Init />} />
-            <Route path="html" element={<HtmlTest />} />
-            <Route path="css" element={<CssTest />} />
+            <Route path="basic" element={<BasicTest />} />
           </Routes>
         </Content>
       </Layout>

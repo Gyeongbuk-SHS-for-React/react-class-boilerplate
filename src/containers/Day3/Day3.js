@@ -2,9 +2,9 @@ import React from "react";
 import { Layout, Menu, Breadcrumb, Typography } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import { Routes, Route, useNavigate, useParams } from "react-router-dom";
-import StateTest from "components/StateTest";
-import PropsTest from "components/PropsTest";
+import ContextAPI from "components/ContextAPI";
 import UseEffectTest from "components/UseEffectTest";
+import ToDoPractice from "components/ToDoPractice";
 
 const { Title } = Typography;
 const { Content, Sider } = Layout;
@@ -22,25 +22,25 @@ const Day3 = () => {
           style={{ height: "100%", borderRight: 0, fontSize: 18 }}
         >
           <Menu.Item
+            key="1"
+            onClick={() => navigate("context")}
+            icon={<UserOutlined />}
+          >
+            Context API
+          </Menu.Item>
+          <Menu.Item
             key="2"
-            onClick={() => navigate("state")}
-            icon={<UserOutlined />}
-          >
-            State 연습
-          </Menu.Item>
-          <Menu.Item
-            key="3"
-            onClick={() => navigate("props")}
-            icon={<UserOutlined />}
-          >
-            Props 연습
-          </Menu.Item>
-          <Menu.Item
-            key="4"
             onClick={() => navigate("effect")}
             icon={<UserOutlined />}
           >
             useEffects 연습
+          </Menu.Item>
+          <Menu.Item
+            key="3"
+            onClick={() => navigate("todo")}
+            icon={<UserOutlined />}
+          >
+            ToDoApp 연습
           </Menu.Item>
         </Menu>
       </Sider>
@@ -63,14 +63,13 @@ const Day3 = () => {
               path=""
               element={
                 <Title level={3}>
-                  리액트 기초와 Movie App 클론 코딩은 day3 컴포넌트와 별도의
-                  파일로 진행합니다.
+                  해당 프로젝트에서 연습 후 새로운 앱을 만들 예정입니다.
                 </Title>
               }
             />
-            <Route path="state" element={<StateTest />} />
-            <Route path="props" element={<PropsTest />} />
+            <Route path="context" element={<ContextAPI />} />
             <Route path="effect" element={<UseEffectTest />} />
+            <Route path="todo" element={<ToDoPractice />} />
           </Routes>
         </Content>
       </Layout>

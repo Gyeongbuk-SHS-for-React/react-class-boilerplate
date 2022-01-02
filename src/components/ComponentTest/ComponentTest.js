@@ -39,7 +39,7 @@ class ClassComponent extends React.Component {
   }
 }
 
-const JsxTest = () => {
+const ComponentTest = () => {
   // function test() {
   //   console.log("test")
   // }
@@ -53,4 +53,4 @@ const JsxTest = () => {
   );
 };
 
-export default JsxTest;
+export default ComponentTest;

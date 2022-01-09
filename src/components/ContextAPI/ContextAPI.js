@@ -1,5 +1,5 @@
 import React, { useState, Component, useContext } from "react";
-import { Button, , Switch } from "antd";
+import { Button, Switch } from "antd";
 import DefaultContext from "contexts/DefauntContext";
 import styled, { ThemeProvider } from "styled-components";
 
